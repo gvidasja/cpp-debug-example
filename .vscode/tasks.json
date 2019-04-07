@@ -1,0 +1,21 @@
+{
+  "version": "2.0.0",
+  "tasks": [
+    {
+      "label": "Build Current C++",
+      "type": "shell",
+      "command": "g++",
+      "args": [
+        "-g",
+        "--std=c++17",
+        "-o",
+        "out/${fileBasenameNoExtension}.out",
+        "${relativeFile}"
+      ],
+      "group": {
+        "kind": "build",
+        "isDefault": true
+      }
+    }
+  ]
+}
