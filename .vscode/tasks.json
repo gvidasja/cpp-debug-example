@@ -2,7 +2,7 @@
   "version": "2.0.0",
   "tasks": [
     {
-      "label": "Build Current C++",
+      "label": "Compile Current C++",
       "type": "shell",
       "command": "g++",
       "args": [
@@ -16,6 +16,22 @@
         "kind": "build",
         "isDefault": true
       }
+    },
+    {
+      "label": "Create out dir",
+      "type": "shell",
+      "command": "mkdir",
+      "args": ["-p", "out"]
+    },
+    {
+      "label": "Create input file",
+      "type": "shell",
+      "command": "touch",
+      "args": ["${fileBasenameNoExtension}.in"]
+    }
+    {
+      "label": "Build Current C++",
+      "dependsOn": ["Create out dir", "Compile Current C++", "Create input file"]
     }
   ]
 }
