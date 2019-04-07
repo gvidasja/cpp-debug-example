@@ -31,7 +31,10 @@
         "debuggerPath": "/usr/bin/gdb"
       },
       "sourceFileMap": {
-        "/mnt/d": "d:\\"
+        "/mnt/c": "c:\\",
+        "/mnt/d": "d:\\",
+        "/mnt/e": "e:\\",
+        "/mnt/z": "z:\\"
       },
       "preLaunchTask": "Build Current C++"
     }
